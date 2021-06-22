@@ -8,7 +8,7 @@ import Card from './Components/Card';
   const [nasaData, setNasaData] = useState([]);
 
   useEffect(() => {
-    axios.get('https://api.nasa.gov/planetary/apod?count=5&api_key=zY65jIfdFMa7dyQunYACdEe51POuPvZQ4YU6L9pP')
+    axios.get('https://api.nasa.gov/planetary/apod?count=5&thumbs=true&api_key=zY65jIfdFMa7dyQunYACdEe51POuPvZQ4YU6L9pP')
         .then((res) => {
             console.log(res);
             setNasaData(res.data);
@@ -20,6 +20,7 @@ import Card from './Components/Card';
 
   return (
     <div className="App">
+      <h1> Astronomy Photos of the Day </h1>
       <div className='card-holder'> 
       {
       nasaData.map((data) => {

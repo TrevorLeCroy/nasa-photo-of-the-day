@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Card = (props) => {
+    const [style, setStyle] = useState({});
     const data = props.data;
     console.log(data);
 
@@ -11,9 +12,8 @@ const Card = (props) => {
                 <h3> {data.date}  </h3>
                 {data.media_type == 'image' ? 
                     <img src={data.hdurl}/> :
-                    <video width='750' height='500' controls>
-                        <source src={data.hdurl} type='video/mp4'/>
-                    </video> }
+                    <img src={data.thumbnail_url}/>  
+                }
                 <p> {data.explanation} </p>
             </div>
         </div>

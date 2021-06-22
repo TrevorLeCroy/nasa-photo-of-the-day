@@ -16,6 +16,10 @@ html {
   background-color: #1d1135;
 }
 
+h1 {
+  color: #fcfbf2
+}
+
 .card-holder {
   margin: 0px auto;
   display: flex;
@@ -26,8 +30,15 @@ html {
 .card {
   background-color: #fcfbf2;
   width: 30rem;
+  border-radius: 2em;
+  box-shadow: 6px 6px 6px #0c164f;
+  margin-bottom: 10px;
 }
 
 .card img {
+  width: 25rem;
+}
+
+.card video {
   width: 25rem;
 }
