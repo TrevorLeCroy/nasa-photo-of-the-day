@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledIncrementButton = styled.button`
-    font-size: 100spx;
+    width: 100px;
     margin: 0px auto;
     padding: 0px auto;
-    border-radius: 25px;
-    height: 2rem;
+    margin-right: 1em;
+    border-radius: 100px;
     border: none;
     background-color: #fcfbf2;
-    color: #1d1135;        
+    color: black;        
 `;
 
 const IncrementButton = (props) => {

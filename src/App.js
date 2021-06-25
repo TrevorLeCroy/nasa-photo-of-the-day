@@ -19,7 +19,7 @@ const IncrementButtonHolder = styled.div`
 // API Key: zY65jIfdFMa7dyQunYACdEe51POuPvZQ4YU6L9pP
  function App() {
   const [nasaData, setNasaData] = useState([]);
-  const [numOfCards, setNumOfCards] = useState(5);
+  const [numOfCards, setNumOfCards] = useState(6);
 
   const updateNumOfCards = (amount) => {
     setNumOfCards(() => {
@@ -50,13 +50,13 @@ const IncrementButtonHolder = styled.div`
         <IncrementButton value={-1} changeNum={updateNumOfCards}/>
         <IncrementButton value={ 1} changeNum={updateNumOfCards}/>
       </IncrementButtonHolder>
-      <div className='card-holder'> 
+      <CardHolder> 
       {
       nasaData.map((data) => {
           return <Card data={data} key={data.url}/>
         })
       }
-      </div>
+      </CardHolder>
     </div>
   );
 }
